@@ -1,6 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import '../css/common.css';
 
 const refs = {
     datetimePicker : document.getElementById('datetime-picker'),
@@ -34,7 +35,7 @@ function startTimer() {
 function stopTimer(time) {
   if (time < 1000) {
     clearInterval(timerId);
-    timeSelectInput.disabled = false;
+    datetimePicker.disabled = false;
     Notify.success(' 🎉 The time has come!');
   }
 }
